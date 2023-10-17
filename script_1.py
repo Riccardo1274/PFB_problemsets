@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-print("I'm colorblind") #testando aggiungo colore preferito e il mio nome
-print("my name is Guglielmo, il pazzo bello")
-activity = 'I love to build sand castles' #creating a variable with my favourtie activity in it
-print(activity)
-
+#creating the variables
+name='Riccardo'
+surname='Rossi'
+activity="building sand castles"
+fav_animal='all animals'
+fav_color="blue,but I'm colorblind"
+print(f"I am {name} {surname}. I like {activity}. If I have to choose a favourite animals, I would say {fav_animal}. My prefered color is {fav_color}")
