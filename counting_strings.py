@@ -21,3 +21,8 @@ nC2 = dna_s2_up.count('C')
 nG2 = dna_s2_up.count('G')
 nT2 = dna_s2_up.count('T')
 print('the numbers of different bases are:\nnumber of A: ',nA2,'\nnumber of C: ',nC2,'\nnumber of G: ',nG2,'\nnumber of T: ',nT2)
+
+#substituting all T with U
+rna_string=dna_string.replace('T','U')
+print(rna_string)
+print('the number of T in RNA is\n', rna_string.count('T'))
