@@ -41,3 +41,16 @@ totGC = nG + nC
 GCpercentage = (totGC/len_dna_string)*100
 print('The total number of GC is\n' ,totGC, '\nThe percentage of GC is' ,GCpercentage,'%')
 
+#creating a substring from nt 100 to 200
+dna_sub = dna_string[99:200]
+print(dna_sub)
+
+#counting the G in the substring
+print(dna_sub.count('G'))
+
+#counting the G in the substring of up and low
+dna_sub2 = dna_string2[99:200]
+print(dna_sub2)
+dna_sub2up = dna_s2_up[99:200]
+print(dna_sub2up)
+print(dna_sub2up.count('G'))
