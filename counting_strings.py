@@ -68,3 +68,8 @@ print(dna_string,'\n\n',dna_complement)
 dna_rev_com=dna_complement[::-1]
 print('\n',dna_rev_com)
 
+#finding the positions of beginning and ending of EcoR1 (AATT)
+print('beginning and ending positions of ECOR1')
+print(dna_string.find('AATT')+1)
+print(dna_string.find('AATT')+4)
+
