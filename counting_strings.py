@@ -4,7 +4,7 @@ dna_string = 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAA
 
 #count the charachters in the string
 print('the total length is\n', len(dna_string))
-
+len_dna_string = len(dna_string)
 #counting the different bases
 nA = dna_string.count('A')
 nC = dna_string.count('C')
@@ -31,3 +31,13 @@ print('the number of T in RNA is\n', rna_string.count('T'))
 rna_s2_up=dna_s2_up.replace('T','U')
 print(rna_s2_up)
 print('the number of T in RNA is\n', rna_s2_up.count('T'))
+
+#counting AT %
+totAT = nA + nT
+ATpercentage = (totAT/len_dna_string)*100
+print('The total number of AT is\n' ,totAT, '\nThe percentage of AT is' ,ATpercentage,'%')
+#counting GC %
+totGC = nG + nC
+GCpercentage = (totGC/len_dna_string)*100
+print('The total number of GC is\n' ,totGC, '\nThe percentage of GC is' ,GCpercentage,'%')
+
