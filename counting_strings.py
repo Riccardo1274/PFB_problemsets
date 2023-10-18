@@ -54,3 +54,17 @@ print(dna_sub2)
 dna_sub2up = dna_s2_up[99:200]
 print(dna_sub2up)
 print(dna_sub2up.count('G'))
+
+#printing the reverse complement
+a=dna_string.replace('A', 'a')
+c=a.replace('C', 'c')
+g=c.replace('G', 'g')
+t=g.replace('T', 't') #creating a subsequence to substitute
+T=t.replace('a', 'T')
+G=T.replace('c', 'G')
+C=G.replace('g', 'C')
+dna_complement=C.replace('t', 'A') #created the complement
+print(dna_string,'\n\n',dna_complement)
+dna_rev_com=dna_complement[::-1]
+print('\n',dna_rev_com)
+
