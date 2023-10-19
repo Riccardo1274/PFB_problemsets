@@ -31,4 +31,9 @@ for num in values:
     sum_odds += num
 print(sum_even)
 print(sum_odds)
-    
+print('--------------------------------')#separatore
+#creating a script to print all numbers from 0 to 100 with range()
+for n in range(100):
+ print(n)   
+for n in range(100):
+ print(n+1) 
