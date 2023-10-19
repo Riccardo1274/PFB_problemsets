@@ -17,9 +17,15 @@ dna = 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAG
 dic_dna={}
 set_dna =set(dna)
 print(set_dna)
+nt_count=0
 for nt in set_dna:
   print(nt)
   count=dna.count(nt)
   dic_dna[nt]=count
+  nt_count += count
 print(dic_dna)
+#calculating gc content
+gc_perc=(dic_dna['G'] + dic_dna['C'])/nt_count
+print('GC content = ',gc_perc*100,'%')
+
 
