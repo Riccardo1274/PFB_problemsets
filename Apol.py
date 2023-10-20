@@ -9,10 +9,13 @@ for line1 in fasta:
 final_string=final_string.replace('\n', '')
 print(final_string)
 
-sep=final_string.split('^')
+sep=final_string.split('^') 
+
+print(sorted(sep, key=len)) #this is the sorted list)
 dic = {}
 for line in sep:
-  dic[len(line)] = line
+  dic[len(line)] = line #not required little mess sdictionary printed as sorted
 for seq in sorted(dic):
   print(seq , '-->', dic[seq])
+print(dic)
 
