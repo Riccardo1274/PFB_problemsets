@@ -15,9 +15,17 @@ print(dic, '\n')
 #if enz in dic:    testing
 #  print(enz, dic[enz], "found")
 
-for key in dic.keys():   #looking for a given enzyme 
-   print(re.findall(enz, key)) 
-#  if re.search(r'enz', key) is True:  
- #   print(f'{enz} is available: is site is {dic[key]}')
-
-
+for key in dic:   #looking for a given enzyme 
+  if re.search(enz, key): 
+     print(f'{enz} is available')
+     print(dic[key]) #substituting the sequence
+     if dic[key].startswith('^'): #subsistuting if the cut site is at the beginning
+        a = re.sub(r'N', r'.', dic[key])
+        b = a.replace('^', '')
+        c = '('+b+')'
+        d = re.sub(c, r'^\1', seq_tocut) 
+        print(d)
+     else:
+        a = re.sub(r'N', r'.', dic[key])
+        b = re.sub(r
+     
