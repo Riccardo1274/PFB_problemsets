@@ -3,8 +3,28 @@ from Bio import SeqIO
 import statistics
 n_contig = 0
 fasta_dict = SeqIO.to_dict(SeqIO.parse('D_melanogaster_genomic.fna', 'fasta'))
+nt_count_dict = {}
+nt_count_dict_single = {}
+total_nt = 0
 for key in fasta_dict:
-  n_contig +=1
+#counting contigs
+  print(f'The contig number: {n_contig} has this nucleotide count:\n{nt_count_dict_single}')
+  n_contig +=1 
   sequence = fasta_dict[key].seq
-print(n_contig) 
- 
+  nt_count_dict_single = {}
+  for nt in sequence:
+        total_nt += 1
+        if nt in nt_count_dict_single:
+           nt_count_dict_single[nt] += 1
+        else:
+           nt_count_dict_single[nt] = 1
+  for nt in sequence:
+        if nt in nt_count_dict:
+            nt_count_dict[nt] += 1
+        else:
+            nt_count_dict[nt] = 1
+print(f'The contig number: {n_contig} has this nucleot    ide count:\n{nt_count_dict_single}')
+print(f'The total nucleotide count is:\n{nt_count_dict}')     
+print(f'The number of contigs is: {n_contig}') 
+print("The proportion of N is:", nt_count_dict['N']/total_nt)
+
