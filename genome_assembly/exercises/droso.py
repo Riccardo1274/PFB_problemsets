@@ -12,15 +12,15 @@ for key in fasta_dict:
   n_contig +=1 
   sequence = fasta_dict[key].seq
   nt_count_dict_single = {}
-  for nt in sequence:
-        total_nt += 1
+  for nt in sequence:   
+        total_nt += 1  #for the N fraction on total
         if nt in nt_count_dict_single:
-           nt_count_dict_single[nt] += 1
+           nt_count_dict_single[nt] += 1   #creating a dictionary for each contig to see the single contents of nucleotides
         else:
            nt_count_dict_single[nt] = 1
   for nt in sequence:
         if nt in nt_count_dict:
-            nt_count_dict[nt] += 1
+            nt_count_dict[nt] += 1  #count of nucleotides for all contigs together
         else:
             nt_count_dict[nt] = 1
 print(f'The contig number: {n_contig} has this nucleot    ide count:\n{nt_count_dict_single}')
