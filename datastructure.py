@@ -19,7 +19,14 @@ for line in beginning_fasta:
      t_list.append(seq) # creating the list to compact the sequence
 seq_tot = ''.join(t_list)
 fasta_dict[head] = seq_tot #adding the last sequence
-
-print (fasta_dict)
-
+#creating a dictionary in the fasta dict with the numbers of nucleotides
+nt_dict ={}
+for key in fasta_dict:
+  nA = fasta_dict[key].count('A')
+  nC = fasta_dict[key].count('C')
+  nG = fasta_dict[key].count('G')
+  nT = fasta_dict[key].count('T')
+  
+  nt_dict[key] = {fasta_dict[key] : {'A' : nA, 'C' : nC, 'G' : nG, 'T' : nT}}
+print(nt_dict)
 
